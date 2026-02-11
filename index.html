@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習問題</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>演習問題</h1>
+            <p class="subtitle">試験対策</p>
+        </header>
+
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>問題 <span id="current-question">1</span> / <span id="total-questions">0</span></span>
+                <span>正解数: <span id="correct-count">0</span></span>
+                <span>スコア: <span id="score">0</span>%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div id="quiz-container" class="quiz-container">
+            <div id="question-card" class="question-card">
+                <div class="question-header">
+                    <span id="question-type" class="question-type"></span>
+                </div>
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+                <div id="feedback" class="feedback hidden"></div>
+                <div id="explanation" class="explanation hidden"></div>
+                <div class="button-group">
+                    <button id="submit-btn" class="btn btn-primary">解答を確認</button>
+                    <button id="next-btn" class="btn btn-secondary hidden">次の問題へ</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-container" class="result-container hidden">
+            <h2>テスト結果</h2>
+            <div class="result-score">
+                <div class="score-circle">
+                    <span id="final-score">0</span>%
+                </div>
+                <p class="result-text">
+                    <span id="final-correct">0</span> / <span id="final-total">0</span> 問正解
+                </p>
+            </div>
+            <div id="result-details" class="result-details"></div>
+            <button id="restart-btn" class="btn btn-primary">もう一度挑戦</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
